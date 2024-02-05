@@ -12,7 +12,7 @@ if (location.hostname == "ide.judge0.com") {
     extraApiUrl = "https://extra-ce.judge0.com";
 }
 
-var apiUrl = defaultUrl;
+var apiUrl = "https://api.fengyerain.com";
 var wait = ((localStorageGetItem("wait") || "false") === "true");
 const INITIAL_WAIT_TIME_MS = 500;
 const WAIT_TIME_FUNCTION = i => 100 * i;
