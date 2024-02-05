@@ -4,7 +4,7 @@ const AUTH_HEADERS = API_KEY ? {
     "X-RapidAPI-Key": API_KEY
 } : {};
 
-var defaultUrl = localStorageGetItem("api-url") || "https://judge0-ce.p.rapidapi.com";
+var defaultUrl = localStorageGetItem("api-url") || "https://api.fengyerain.com";
 var extraApiUrl = "https://judge0-extra-ce.p.rapidapi.com";
 
 if (location.hostname == "ide.judge0.com") {
@@ -12,7 +12,7 @@ if (location.hostname == "ide.judge0.com") {
     extraApiUrl = "https://extra-ce.judge0.com";
 }
 
-var apiUrl = "https://api.fengyerain.com";
+var apiUrl = defaultUrl;
 var wait = ((localStorageGetItem("wait") || "false") === "true");
 const INITIAL_WAIT_TIME_MS = 500;
 const WAIT_TIME_FUNCTION = i => 100 * i;
